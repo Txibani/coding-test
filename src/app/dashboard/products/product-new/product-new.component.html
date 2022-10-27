@@ -1,0 +1,47 @@
+<div class="new">
+    <h1 class="new-title">Create product</h1>
+
+    <div class="new-content">
+
+        <form [formGroup]="newProductForm">
+
+            <mat-form-field appearance="outline">
+                <mat-label> {{ 'product.name' | translate }} </mat-label>
+                <input type="text" matInput formControlName="name" [required]="true">
+                <mat-error *ngIf="newProductForm.controls['name'].errors?.required">
+                    {{ 'product.form-errors.required-field' | translate }}
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label> {{ 'product.description' | translate }} </mat-label>
+                <textarea matInput type="text" formControlName="description"></textarea>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label> {{ 'product.price' | translate }} </mat-label>
+                <input type="number" matInput formControlName="price">
+                <mat-error *ngIf="newProductForm.controls['name'].errors?.required">
+                    {{ 'product.form-errors.required-field' | translate }}
+                </mat-error>
+                <mat-error *ngIf="newProductForm.controls['price'].errors?.maxlength">
+                    {{ 'product.form-errors.max' | translate }}
+                </mat-error>
+                <mat-error *ngIf="newProductForm.controls['price'].errors?.pattern">
+                    {{ 'product.form-errors.only-numbers' | translate }}
+                </mat-error>
+            </mat-form-field>
+
+        </form>
+
+    </div>
+
+    <div mat-dialog-actions class="new-footer">
+        <button class="button" mat-button mat-button-base mat-dialog-close (click)="closeDialog()" color="primary">
+            Cancel
+        </button>
+        <button class="button" mat-raised-button color="primary" [disabled]="!newProductForm.valid" (click)="createProduct()">
+            Save
+        </button>
+    </div>
+</div>

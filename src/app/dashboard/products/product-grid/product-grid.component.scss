@@ -1,0 +1,47 @@
+.grid {
+    width: 100%;
+    margin: 1em;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+    p {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1em;
+        background: #959595;
+        color: white;
+    }
+
+    &-content {
+        padding: 0;
+        list-style: none;
+        width: 100%;
+
+        li {
+            border-bottom: solid 1px grey;
+            padding: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-transform: uppercase;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            span {
+                font-weight: 500;
+                text-transform: capitalize;
+            }
+
+        }
+
+    }
+
+    &-button {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+}

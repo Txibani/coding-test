@@ -1,0 +1,35 @@
+{
+    "title": "My dashboard",
+    "sections": {
+        "products": "Products",
+        "customers": "Customers",
+        "users": "My Information"
+    },
+    "customer": {
+        "customers": "Customers",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "purchasedProductsIds": "Purchased Products Ids"
+    },
+    "user": {
+        "userName": "Username",
+        "email": "Email",
+        "fullName": "Full Name",
+        "role": "Role"
+    },
+    "product": {
+        "products": "Products",
+        "product": "Product",
+        "new": "Product new",
+        "name": "Name",
+        "description": "Description",
+        "price": "Price",
+        "form-errors": {
+            "required-field": "This field is required",
+            "max": "Max. two digits",
+            "only-numbers": "Only numbers allowed"
+        },
+        "product-price": "Product price"
+    }
+}

@@ -1,0 +1,18 @@
+.new {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mat-dialog-actions {
+        justify-content: flex-end;
+    }
+
+}

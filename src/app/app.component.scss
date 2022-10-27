@@ -1,0 +1,41 @@
+.main {
+
+    ::ng-deep .mat-drawer-content {
+        height: 100vh;
+    }
+
+    &-body {
+        padding: 2em;
+        max-width: 1920px;
+    }
+
+    .mat-drawer {
+        min-width: 200px;
+        padding: 1em;
+    }
+
+    &-toolbar {
+
+        &-btn {
+            margin-right: 2em;
+        }
+
+    }
+
+    &-sidebar {
+
+        &-link {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+
+            & > a {
+                padding-left: 1em;
+            }
+
+        }
+
+    }
+
+}

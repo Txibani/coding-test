@@ -1,0 +1,15 @@
+h1 {
+    padding-left: 0.75em;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+
+    &-view {
+        text-align: right;
+    }
+
+}

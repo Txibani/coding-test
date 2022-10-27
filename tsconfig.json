@@ -5,9 +5,11 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
+    "strictPropertyInitialization": false,
     "strict": true,
     "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "strictNullChecks": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
@@ -21,7 +23,18 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@store/*": [
+        "src/app/store/*"
+      ],
+      "@sharedModels": [
+        "src/app/shared/models/"
+      ],
+      "@dashboardServices": [
+        "src/app/dashboard/services"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

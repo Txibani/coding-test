@@ -1,0 +1,29 @@
+<h1> {{ 'product.products' | translate }} </h1>
+
+<div class="actions">
+    <button mat-raised-button color="accent" (click)="createProduct()">
+        <mat-icon>add</mat-icon>
+        {{ 'product.new' | translate }}
+    </button>
+    <div class="actions-view">
+        <button mat-icon-button color="secondary" (click)="gridView = true">
+            <mat-icon>grid_on</mat-icon>
+        </button>
+        <button mat-icon-button color="secondary" (click)="gridView = false">
+            <mat-icon>list</mat-icon>
+        </button>
+    </div>
+</div>
+
+<ng-container *ngIf="gridView; else listView">
+    <app-product-grid
+        [productsList]="products$ | async"
+        (productToDelete)="deleteProduct($event)">
+    </app-product-grid>
+</ng-container>
+<ng-template #listView>
+    <app-product-list
+        [productsList]="products$ | async"
+        (productToDelete)="deleteProduct($event)">
+    </app-product-list>
+</ng-template>
